@@ -9,6 +9,7 @@ set showmatch
 set showcmd
 set ruler
 set number
+syntax on
 
 set list
 set listchars=tab:▸\ ,eol:¬
