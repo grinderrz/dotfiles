@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/mnt/prog/game_test'
-let g:netrw_dirhist_2='/var/www/Sportvisor/application/config'
-let g:netrw_dirhist_3='/home/grinderrz'
-let g:netrw_dirhist_4='/var/www/Sportvisor/application/views/ratings/basketball'
-let g:netrw_dirhist_5='/home/grinderrz/.vim'
-let g:netrw_dirhist_6='/home/grinderrz/.npm'
-let g:netrw_dirhist_7='/var/log/lighttpd'
