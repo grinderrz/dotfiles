@@ -14,6 +14,8 @@ syntax on
 set list
 set listchars=tab:▸\ ,eol:¬
 
+call pathogen#infect()
+
 :filetype plugin on
 :filetype plugin indent on
 
