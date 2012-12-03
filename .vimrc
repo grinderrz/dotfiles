@@ -1,4 +1,5 @@
 set nocompatible
+set noswapfile
 
 set smartindent
 set autoindent
