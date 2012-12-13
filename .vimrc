@@ -11,6 +11,7 @@ set showcmd
 set ruler
 set number
 syntax on
+set encoding=utf8
 
 set list
 set listchars=tab:▸\ ,eol:¬
