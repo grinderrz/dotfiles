@@ -39,3 +39,10 @@ map <C-j> : call JavaScriptLint()<CR>
 func! JavaScriptLint()
     exec “!jslint -process % “
 endfunc
+
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
