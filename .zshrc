@@ -34,3 +34,6 @@ plugins=(git vi-mode node npm redis-cli)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+#
+# tmux here on mac
+path+=/opt/bin

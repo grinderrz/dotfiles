@@ -1,5 +1,7 @@
 set nocompatible
 set noswapfile
+set nocp
+call pathogen#infect()
 
 set smartindent
 set autoindent
@@ -10,14 +12,13 @@ set showmatch
 set showcmd
 set ruler
 set number
-syntax on
 set encoding=utf8
 
 set list
 set listchars=tab:▸\ ,eol:¬
 
-call pathogen#infect()
 
+syntax on
 :filetype plugin on
 :filetype plugin indent on
 
