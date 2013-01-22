@@ -1,6 +1,5 @@
 set nocompatible
 set noswapfile
-set nocp
 call pathogen#infect()
 
 set smartindent
@@ -47,3 +46,4 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+colorscheme default
