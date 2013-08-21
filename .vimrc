@@ -32,13 +32,13 @@ if has("autocmd")
 
 endif
 
-inoremap jk <ESC>
-set tags+=$HOME."/vimtags/tags"
+"inoremap jk <ESC>
+"set tags+=$HOME."/vimtags/tags"
 
-map <C-j> : call JavaScriptLint()<CR>
-func! JavaScriptLint()
-    exec “!jslint -process % “
-endfunc
+"map <C-j> : call JavaScriptLint()<CR>
+"func! JavaScriptLint()
+"   exec “!jslint -process % “
+"endfunc
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>ew :e %%
@@ -47,3 +47,8 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
 colorscheme default
+
+set keymap=russian-jcuken
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
