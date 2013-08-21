@@ -11,6 +11,9 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# vim 7.4
+alias vim="/usr/local/Cellar/vim/7.4/bin/vim"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
