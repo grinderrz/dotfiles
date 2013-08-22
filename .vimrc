@@ -53,6 +53,3 @@ set keymap=russian-jcuken
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
-
-" ё
-:setlocal spell spelllang=ru_yo,en_us
