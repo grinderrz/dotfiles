@@ -14,6 +14,9 @@ ZSH_THEME="robbyrussell"
 # vim 7.4
 alias vim="/usr/local/Cellar/vim/7.4/bin/vim"
 
+# ctags
+alias ctags="/usr/local/bin/ctags"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
