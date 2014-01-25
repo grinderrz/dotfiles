@@ -26,6 +26,8 @@ set ts=2 sts=2 sw=2 expandtab
 if has("autocmd")
   filetype on
 
+  au BufNewFile,BufRead *.jst set filetype=javascript
+
   autocmd FileType coffee setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab

@@ -43,3 +43,5 @@ source $ZSH/oh-my-zsh.sh
 #
 # tmux here on mac
 path+=/opt/bin
+
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/
