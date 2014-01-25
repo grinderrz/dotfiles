@@ -16,6 +16,7 @@ set encoding=utf8
 set list
 set listchars=tab:▸\ ,eol:¬
 
+set clipboard=unnamed
 
 syntax on
 :filetype plugin on
