@@ -7,7 +7,9 @@ set autoindent
 
 set incsearch
 set hlsearch
+set smartcase
 set showmatch
+
 set showcmd
 set ruler
 set number
