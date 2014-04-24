@@ -11,6 +11,12 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# vim 7.4
+alias vim="/usr/local/Cellar/vim/7.4/bin/vim"
+
+# ctags
+alias ctags="/usr/local/bin/ctags"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -29,7 +35,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode node npm redis-cli)
+plugins=(git vi-mode node npm redis-cli web-search tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,3 +43,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # tmux here on mac
 path+=/opt/bin
+
+# user gems
+path+=/Users/grinderrz/.gem/ruby/2.0.0/bin
+
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/
