@@ -53,3 +53,18 @@ set keymap=russian-jcuken
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+" run selected script in myslq which opened in 0 pane
+" TODO
+" - move to separate plugin
+" - gen tmp filename random
+" - remove tmp file after exec
+" - make pane to exec as option
+vmap <Leader>r :call Tmux_send()<CR>
+function! Tmux_send() range
+  normal gv"xy
+  call writefile(split(@x, '\n'), '/tmp/vimselection')
+  call system("tmux send-keys -l -t 0 'mysql -h dev-sql -uleotest -pmmN2vVZbuHrN2J2T --skip-column-names -s -e \"source /tmp/vimselection\" dictionary > syntransvotes.sql'")
+  "call system("tmux send-keys -l -t 0 'source /tmp/vimselection'")
+  call system("tmux send-keys -t 0 'Enter'")
+endfunction
