@@ -13,6 +13,7 @@ set showmatch
 set showcmd
 set ruler
 set number
+set relativenumber
 set encoding=utf8
 
 set list
@@ -37,14 +38,6 @@ if has("autocmd")
 
 endif
 
-"inoremap jk <ESC>
-"set tags+=$HOME."/vimtags/tags"
-
-"map <C-j> : call JavaScriptLint()<CR>
-"func! JavaScriptLint()
-"   exec “!jslint -process % “
-"endfunc
-
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
@@ -58,3 +51,13 @@ set keymap=russian-jcuken
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+iabbrev funciton function
+
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": 0}
