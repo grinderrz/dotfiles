@@ -32,9 +32,12 @@ if has("autocmd")
   augroup filytype
     autocmd!
     autocmd BufNewFile,BufRead *.jst set filetype=javascript
+    autocmd BufNewFile,BufRead *.md set filetype=markdown
     autocmd FileType coffee setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+    autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<cr>
   augroup END
 
 endif
