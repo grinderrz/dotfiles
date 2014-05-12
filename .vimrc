@@ -65,3 +65,6 @@ iabbrev funciton function
 
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": 0}
+
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
