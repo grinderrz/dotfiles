@@ -58,8 +58,6 @@ highlight lCursor guifg=NONE guibg=Cyan
 
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-inoremap jk <esc>
-inoremap <esc> <nop>
 
 iabbrev funciton function
 
