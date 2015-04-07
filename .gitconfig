@@ -1,6 +1,6 @@
 [user]
 	name = Grigoriy Glushko
-	email = grinderrz@gmail.com
+	email = gglushko@lingualeo.com
 [core]
 	editor = vim
 [merge]
@@ -15,3 +15,5 @@
 	untrack = update-index
 	lsuntrack = ls-files
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+	helper = osxkeychain

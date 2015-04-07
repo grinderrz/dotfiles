@@ -12,7 +12,7 @@ ZSH_THEME="robbyrussell"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # vim 7.4
-alias vim="/usr/local/Cellar/vim/7.4/bin/vim"
+alias vim="/usr/local/Cellar/vim/7.4.430_1/bin/vim"
 
 # ctags
 alias ctags="/usr/local/bin/ctags"
@@ -39,12 +39,13 @@ plugins=(git vi-mode node npm redis-cli web-search tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-#
 # tmux here on mac
 path+=/opt/bin
 
 # user gems
 path+=/Users/grinderrz/.gem/ruby/2.0.0/bin
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/
+JAVA_HOME=$(/usr/libexec/java_home)
+
+# opp.zsh
+source ~/opp.zsh/opp.zsh
