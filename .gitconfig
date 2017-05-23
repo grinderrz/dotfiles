@@ -1,6 +1,6 @@
 [user]
-	name = Grigoriy Glushko
-	email = gglushko@lingualeo.com
+	name = Grigory Glushko
+	email = grigory.glushko@bgoperator.com
 [core]
 	editor = vim
 [merge]
@@ -17,3 +17,8 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

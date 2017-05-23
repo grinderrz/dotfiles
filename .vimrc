@@ -1,14 +1,13 @@
 set nocompatible
 set noswapfile
+
+let g:pathogen_disabled = ['ensime-vim']
 call pathogen#infect()
 
 set smartindent
 set autoindent
 
-set incsearch
-set hlsearch
-set smartcase
-set showmatch
+set incsearch hlsearch smartcase showmatch ignorecase
 
 set showcmd
 set ruler
@@ -16,10 +15,15 @@ set number
 set relativenumber
 set encoding=utf8
 
+set autoread
+
 set list
 set listchars=tab:▸\ ,eol:¬
 
 set clipboard=unnamed
+
+" faster macro
+" set lazyredraw 
 
 syntax on
 :filetype plugin on
@@ -33,9 +37,13 @@ if has("autocmd")
     autocmd!
     autocmd BufNewFile,BufRead *.jst set filetype=javascript
     autocmd BufNewFile,BufRead *.md set filetype=markdown
+    autocmd BufNewFile,BufRead *.cl set filetype=c
+    autocmd BufNewFile,BufRead *.lfe set filetype=lisp
     autocmd FileType coffee setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType cpp setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType markdown onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
     autocmd FileType markdown onoremap ah :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<cr>
   augroup END
@@ -48,13 +56,14 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
-colorscheme default
+let &t_Co=256
+"colorscheme default
 
 " russian keymap
-set keymap=russian-jcuken
-set iminsert=0
-set imsearch=0
-highlight lCursor guifg=NONE guibg=Cyan
+"set keymap=russian-jcuken
+"set iminsert=0
+"set imsearch=0
+"highlight lCursor guifg=NONE guibg=Cyan
 
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -64,8 +73,7 @@ iabbrev funciton function
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": 0}
 
-let g:paredit_leader = '\'
-
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
 nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
 
+let ensime_server_v2=1

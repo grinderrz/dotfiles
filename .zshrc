@@ -12,7 +12,7 @@ ZSH_THEME="robbyrussell"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # vim 7.4
-alias vim="/usr/local/Cellar/vim/7.4.430_1/bin/vim"
+# alias vim="/usr/local/Cellar/vim/7.4.430_1/bin/vim"
 
 # ctags
 alias ctags="/usr/local/bin/ctags"
@@ -42,10 +42,24 @@ source $ZSH/oh-my-zsh.sh
 # tmux here on mac
 path+=/opt/bin
 
+# for macports
+path+=/opt/local/bin
+
 # user gems
 path+=/Users/grinderrz/.gem/ruby/2.0.0/bin
+
+path+="/Applications/Racket v6.3/bin"
 
 JAVA_HOME=$(/usr/libexec/java_home)
 
 # opp.zsh
 source ~/opp.zsh/opp.zsh
+
+PERL_MB_OPT="--install_base \"/Users/grinderrz/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/grinderrz/perl5"; export PERL_MM_OPT;
+CMAKE_PREFIX_PATH=/Users/grinderrz/opencv3/share/OpenCV; export CMAKE_PREFIX_PATH;
+DYLD_LIBRARY_PATH=/Users/grinderrz/opencv3/lib; export DYLD_LIBRARY_PATH;
+PKG_CONFIG_PATH=/home/odroid/opencv3/lib/pkgconfig/; export PKG_CONFIG_PATH;
+
+# http_proxy="http://192.168.35.1:3128"; export http_proxy;
+# https_proxy="https://192.168.35.1:3128"; export https_proxy;
