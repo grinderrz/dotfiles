@@ -17,6 +17,10 @@ ZSH_THEME="robbyrussell"
 # ctags
 alias ctags="/usr/local/bin/ctags"
 
+# nvim
+alias vim="nvim"
+alias vi="nvim"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -63,3 +67,6 @@ PKG_CONFIG_PATH=/home/odroid/opencv3/lib/pkgconfig/; export PKG_CONFIG_PATH;
 
 # http_proxy="http://192.168.35.1:3128"; export http_proxy;
 # https_proxy="https://192.168.35.1:3128"; export https_proxy;
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+export LC_ALL=en_US.UTF-8

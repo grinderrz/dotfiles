@@ -1,6 +1,8 @@
 [user]
 	name = Grigory Glushko
-	email = grigory.glushko@bgoperator.com
+	email = grinderrz@gmail.com
+[includeIf "gitdir:~/work/"]
+	path = ~/work/.gitconfig
 [core]
 	editor = vim
 [merge]
@@ -22,3 +24,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+#[http]
+#	proxy = 127.0.0.1:3128

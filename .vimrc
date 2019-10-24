@@ -1,8 +1,23 @@
+call plug#begin('~/.vim/plugged-raw')
+Plug 'airblade/vim-gitgutter'
+"Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-repeat'
+Plug 'luochen1990/rainbow'
+Plug 'guns/vim-clojure-static'
+"Plug 'tpope/vim-fireplace', {'for': 'clojure'}
+Plug 'guns/vim-sexp'
+Plug 'vim-airline/vim-airline'
+
+Plug 'kotarak/vimpire'
+
+"Plug '~/prog/vim-repl'
+call plug#end()
+
 set nocompatible
 set noswapfile
 
-let g:pathogen_disabled = ['ensime-vim']
-call pathogen#infect()
+"let g:pathogen_disabled = ['ensime-vim']
+"call pathogen#infect()
 
 set smartindent
 set autoindent
@@ -70,10 +85,18 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 iabbrev funciton function
 
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": "default", "target_pane": 0}
+"let g:slime_target = "tmux"
+"let g:slime_default_config = {"socket_name": "default", "target_pane": 0}
 
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
-nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
+"let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+"nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
 
 let g:rainbow_active = 1
+
+
+"nnoremap <Plug>(lol_test) :echo "lol test"<CR>
+"nmap <C-l> <Plug>(lol_test)
+
+nmap <C-l> <Plug>(vimpire_eval)
+nmap <leader>d <Plug>(vimpire_doc_lookup_word)
+nmap <C-x> <Plug>(vimpire_close_result_buffer)
