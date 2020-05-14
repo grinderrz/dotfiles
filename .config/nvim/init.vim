@@ -8,6 +8,9 @@ Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 Plug 'guns/vim-sexp'
 Plug 'vim-airline/vim-airline'
 Plug 'jgdavey/tslime.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'aklt/plantuml-syntax'
 
 Plug 'kotarak/vimpire'
 
@@ -84,8 +87,11 @@ augroup filetype
   autocmd FileType c setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType sql setlocal ts=4 sts=4 sw=4 expandtab
   autocmd BufNewFile,BufRead *.wood setlocal ts=2 sts=2 sw=2 expandtab filetype=wood
-  autocmd BufNewFile,BufRead *.mflang setlocal ts=4 sts=4 sw=4 expandtab filetype=mflang
+  autocmd BufNewFile,BufRead *.morph setlocal ts=2 sts=2 sw=2 expandtab filetype=wood
   autocmd BufNewFile,BufRead *.xml setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd BufNewFile,BufRead *.h setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd BufNewFile,BufRead *.s setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd BufNewFile,BufRead *.glsl setlocal ts=4 sts=4 sw=4 expandtab
 augroup END
 
 " tslime
@@ -94,3 +100,23 @@ let g:tslime_always_current_window = 1
 vmap <localleader>t <Plug>SendSelectionToTmux
 nmap <localleader>t <Plug>NormalModeSendToTmux
 nmap <localleader>r <Plug>SetTmuxVars
+
+" mac <M-.> mappings
+nmap œ <M-q>
+nmap ∑ <M-w>
+nmap ´ <M-e>
+nmap ∫ <M-b>
+nmap ˙ <M-h>
+nmap ∆ <M-j>
+nmap ˚ <M-k>
+nmap ¬ <M-l>
+nmap Ó <M-S-h>
+nmap Ô <M-S-j>
+nmap  <M-S-k>
+nmap Ò <M-S-l>
+
+" fireplace
+nmap ® <M-r>
+nmap ‰ <M-S-r>
+nmap <M-r> :w<CR>:Require<CR>
+nmap <M-S-r> :w<CR>:Require!<CR>
